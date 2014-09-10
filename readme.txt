@@ -23,7 +23,7 @@ Slate provides a clean, simplified design for your WordPress Admin area.
 
 = Why doesn't something look right? =
 
-This is my first admin theme, and given all the various states and pages thare are, there's a good chance I've missed some stuff. Please just submit a support ticket if you run into anything wacky.
+This is my first admin theme, and given all the various states and pages there are, there's a good chance I've missed some stuff. Please just submit a support ticket if you run into anything wacky.
 
 == Screenshots ==
 
@@ -31,6 +31,10 @@ This is my first admin theme, and given all the various states and pages thare a
 2. All Posts Page
 
 == Changelog ==
+
+= 1.0.1 =
+* Added new Dashboard styles.
+* Removed jQuery UI.
 
 = 1.0 =
 * Initial release.

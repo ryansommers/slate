@@ -437,16 +437,13 @@ div.mce-toolbar-grp > .mce-container-body {
 	width: 299px;
 	/*When set to 300px, it stops changing to fixed on scroll. No idea why.*/
 }
-@media only screen and (max-width: 850px) {
-
-}
 #poststuff h3 {
+	color: #333;
 	font-size: 16px;
 	font-weight: 400;
 }
 @media only screen and (max-width: 850px) {
 	#poststuff h3 {
-		color: #333;
 		padding: 8px 0;
 	}
 }
@@ -595,7 +592,6 @@ div.mce-toolbar-grp > .mce-container-body {
 	padding: 5px 20px 10px 20px;
 }
 #normal-sortables h3 {
-	color: #333;
 	padding: 8px 0;
 }
 #normal-sortables .postbox .inside, .stuffbox .inside {
@@ -736,6 +732,96 @@ td.post-title {
 }
 .fixed .column-posts {
 	width: 76px;
+}
+
+
+/* *********************** */
+/* Dashboard */
+/* *********************** */
+#welcome-panel {
+	border: 0 none;
+	border-bottom: 1px solid #eeecec;
+	border-top: 1px solid #eeecec;
+	margin: 20px 0 30px 0;
+	padding: 30px 0 20px 0;
+}
+.welcome-panel-content {
+	margin: 0;
+}
+.welcome-panel-content h3 {
+	color: #2ea2cc;
+	font-size: 20px;
+	font-weight: 600;
+}
+.welcome-panel-content h4 {
+	color: #333;
+	font-size: 16px;
+	font-weight: 400;
+}
+#postbox-container-1 {
+	/*margin: 0 40px 0 0;*/
+}
+#wpbody-content #dashboard-widgets .postbox-container {
+	margin: 0 2% 0 0;
+	width: 23%;
+}
+#wpbody-content #dashboard-widgets #postbox-container-4 {
+	margin: 0;
+	width: 25%;
+}
+@media only screen and (max-width: 1499px) and (min-width: 800px) {
+	#wpbody-content #dashboard-widgets .postbox-container {
+		margin: 0 5% 0 0;
+		width: 47.5%;
+	}
+}
+@media only screen and (max-width: 1499px) and (min-width: 800px) {
+	#wpbody-content #dashboard-widgets #postbox-container-2, 
+	#wpbody-content #dashboard-widgets #postbox-container-3, 
+	#wpbody-content #dashboard-widgets #postbox-container-4 {
+		float: right;
+		margin: 0;
+		width: 47.5%;
+	}
+}
+@media only screen and (max-width: 1800px) and (min-width: 1500px) {
+	#wpbody-content #dashboard-widgets .postbox-container {
+		margin: 0 3.3333% 0 0;
+		width: 30%;
+	}
+	#wpbody-content #dashboard-widgets #postbox-container-3 {
+		margin: 0;
+	}
+}
+@media only screen and (max-width: 799px) {
+	#wpbody-content #dashboard-widgets .postbox-container {
+		width: 100%;
+	}
+}
+#dashboard-widgets .meta-box-sortables {
+	margin: 0;
+}
+#dashboard-widgets-wrap {
+	margin: 0;
+}
+#dashboard-widgets-wrap .postbox {
+	margin-bottom: 40px;
+}
+#dashboard-widgets-wrap h3 {
+	color: #333;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 12px 12px;
+}
+#dashboard-widgets-wrap #normal-sortables .postbox,
+#dashboard-widgets-wrap #side-sortables .postbox {
+	background: #eeecec;
+	border: 0 none;
+	border-radius: 2px;
+	padding: 5px 10px 10px 10px;
+}
+#dashboard_right_now .main p {
+	margin: 10px 0 0 0;
 }
 
 /* *********************** */

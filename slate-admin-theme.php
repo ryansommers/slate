@@ -12,7 +12,6 @@ Author URI: http://ryansommers.com
 function slate_theme_files() {
   wp_enqueue_style( 'slate-admin-theme', plugins_url('slate.css', __FILE__) );
   wp_enqueue_script( 'slate', plugins_url( "js/slate.js", __FILE__ ), array( 'jquery' ), '1.0.0', true );
-  wp_enqueue_script( 'jqueryui', 'https://code.jquery.com/ui/1.11.0/jquery-ui.min.js', array( 'jquery' ), '1.11.0', true );
 }
 add_action( 'admin_enqueue_scripts', 'slate_theme_files' );
 add_action( 'login_enqueue_scripts', 'slate_theme_files' );
