@@ -3,6 +3,23 @@ html.wp-toolbar {
 	background: none;
 	padding-top: 0;
 }
+.login {
+	background: #fff;
+}
+.login form {
+	background: #eeecec;
+	border-radius: 3px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding: 26px 24px 30px 24px;
+}
+.login form .forgetmenot {
+	margin-top: 10px;
+}
+.login form .submit {
+	margin: 10px 0 0 0;
+}
+
 
 /* *********************** */
 /* Main Wraps */
@@ -822,6 +839,9 @@ td.post-title {
 }
 #dashboard_right_now .main p {
 	margin: 10px 0 0 0;
+}
+#dashboard-widgets-wrap .postbox .handlediv {
+	width: 23px;
 }
 
 /* *********************** */

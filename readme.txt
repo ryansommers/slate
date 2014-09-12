@@ -3,7 +3,7 @@ Contributors: ryansommers
 Tags: admin theme, admin page, admin page framework, wordpress admin panel, admin, plugin, admin panel, wordpress, best admin panel, wordpress admin theme, wordpress admin panel, flat admin theme, modern admin theme, simple admin theme, ryan sommers.
 Requires at least: 4.0
 Tested up to: 4.0
-Stable tag: 1.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,9 +32,17 @@ This is my first admin theme, and given all the various states and pages there a
 
 == Changelog ==
 
+= 1.0.2 =
+* Added new Login page styles.
+
 = 1.0.1 =
 * Added new Dashboard styles.
 * Removed jQuery UI.
 
 = 1.0 =
 * Initial release.
+
+== Upgrade Notice ==
+
+= 1.0.2 =
+Added new Login page styles.
