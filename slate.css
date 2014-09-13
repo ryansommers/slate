@@ -247,6 +247,7 @@ div.updated {
 #adminmenu li>a.menu-top:focus {
 	background: none;
 }
+#adminmenu li.current a.menu-top,
 #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
 	background: none;
 	color: #ea5340;
