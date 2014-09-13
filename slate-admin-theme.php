@@ -23,7 +23,7 @@ add_action( 'after_setup_theme', 'my_theme_add_editor_styles' );
 
 add_filter('admin_footer_text', 'left_admin_footer_text_output');
 function left_admin_footer_text_output($text) {
-  $text = 'WP Admin Theme <a href="https://github.com/ryansommers/slate">Slate</a> by <a href="http://ryansommers.com/">Ryan Sommers</a>';
+  $text = 'WP Admin Theme <a href="http://wordpress.org/plugins/slate-admin-theme/">Slate</a> by <a href="http://ryansommers.com/">Ryan Sommers</a>';
   return $text;
 }
 

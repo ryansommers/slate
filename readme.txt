@@ -50,5 +50,11 @@ This is my first admin theme, and given all the various states and pages there a
 
 == Upgrade Notice ==
 
+= 1.0.3 =
+* Minor CSS fix to the admin menu.
+
 = 1.0.2 =
 Added new Login page styles.
+
+= 1.0.1 =
+* Added new Dashboard styles.
