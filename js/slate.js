@@ -1,6 +1,6 @@
 (function($) {
 	$(document).ready(function() {
-		if ($('body').is('.post-type-post') || $('body').is('.post-type-page')) {
+		if ($('body').is('.post-type-post') || $('body').is('.post-type-page') || $('body').is('.comment-php')) {
 
 			// Move elements inside #post-body-content
 			$('.wrap > h2, #screen-meta-links, #screen-meta').prependTo('#post-body-content');
@@ -17,7 +17,9 @@
 			if ($('.edit-tags-php #col-left').length != 0) {
 				$('.edit-tags-php #col-left').before('<div id="col-leftback"></div>');
 			}
-
+			if ($('.comment-php #submitdiv').length != 0) {
+				$('.comment-php #submitdiv').before('<div id="submitdiv-back"></div>');
+			}
 		}
 	});
 }(jQuery));

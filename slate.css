@@ -58,18 +58,21 @@ html.wp-toolbar {
 	margin: 40px 0 0 0;
 }
 .post-php .wrap,
-.post-new-php .wrap {
+.post-new-php .wrap,
+.comment-php .wrap {
 	margin: 0;
 }
 @media only screen and (max-width: 850px) {
 	.post-php .wrap,
-	.post-new-php .wrap {
+	.post-new-php .wrap,
+	.comment-php .wrap {
 		margin: 0 60px 0 0;
 	}
 }
 @media screen and (max-width: 782px) {
 	.post-php .wrap,
-	.post-new-php .wrap {
+	.post-new-php .wrap,
+	.comment-php .wrap {
 		margin: 0 20px 0 0;
 	}
 }
@@ -98,6 +101,9 @@ html.wp-toolbar {
 }
 @media only screen and (max-width: 960px) {
 	#wpcontent #wpadminbar {
+		left: 200px;
+	}
+	.auto-fold #wpcontent #wpadminbar {
 		left: 36px;
 	}
 }
@@ -209,6 +215,10 @@ div.updated {
 #adminmenu .opensub .wp-submenu a:hover {
 	color: #b9ecff;
 }
+.folded #adminmenu .wp-has-current-submenu a:hover,
+#adminmenu .wp-has-current-submenu.opensub .wp-submenu a:hover {
+	color: #ffd8d3;
+}
 #adminmenu .wp-has-current-submenu a {
 	color: #bbb;
 }
@@ -233,14 +243,48 @@ div.updated {
 	color: #fff;
 }
 @media only screen and (max-width: 960px) {
-	#adminmenu .current div.wp-menu-image:before, 
-	#adminmenu .wp-has-current-submenu div.wp-menu-image:before, 
-	#adminmenu a.current:hover div.wp-menu-image:before, 
-	#adminmenu a.wp-has-current-submenu:hover div.wp-menu-image:before, 
-	#adminmenu li.wp-has-current-submenu:hover div.wp-menu-image:before {
+	.auto-fold #adminmenu .current div.wp-menu-image:before, 
+	.auto-fold #adminmenu .wp-has-current-submenu div.wp-menu-image:before, 
+	.auto-fold #adminmenu a.current:hover div.wp-menu-image:before, 
+	.auto-fold #adminmenu a.wp-has-current-submenu:hover div.wp-menu-image:before, 
+	.auto-fold #adminmenu li.wp-has-current-submenu:hover div.wp-menu-image:before {
 		color: #fff;
 	}
 }
+#adminmenu .wp-has-current-submenu.opensub .wp-submenu .wp-submenu-head,
+#adminmenu .wp-submenu .wp-submenu-head,
+.folded #adminmenu .wp-submenu .wp-submenu-head,
+.folded #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head {
+	font-weight: 600;
+}
+.folded #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, 
+.folded #adminmenu .wp-menu-arrow, 
+.folded #adminmenu .wp-menu-arrow div, 
+.folded #adminmenu li.current a.menu-top, 
+.folded #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, 
+.folded #adminmenu li.current.menu-top, 
+.folded #adminmenu li.wp-has-current-submenu {
+	background: #ea5340;
+	color: #fff;
+}
+@media only screen and (max-width: 960px) {
+	#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, 
+	#adminmenu .wp-menu-arrow, 
+	#adminmenu .wp-menu-arrow div, 
+	#adminmenu li.current a.menu-top, 
+	#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, 
+	.folded #adminmenu li.current.menu-top, 
+	.folded #adminmenu li.wp-has-current-submenu {
+		background: #ea5340;
+		color: #fff;
+	}
+}
+
+.folded #adminmenu .wp-has-current-submenu .wp-submenu, 
+.folded #adminmenu a.wp-has-current-submenu:focus+.wp-submenu {
+	background-color: #ea5340;
+}
+
 #adminmenu li.menu-top:hover, 
 #adminmenu li.menu-top:hover a, 
 #adminmenu li.opensub>a.menu-top, 
@@ -257,12 +301,17 @@ div.updated {
 	background: #ea5340;
 }
 @media only screen and (max-width: 960px) {
-	#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+	.auto-fold #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
 		background: #ea5340;
 	}
 }
 #adminmenu .wp-has-current-submenu .wp-submenu {
 	background: none;
+}
+@media only screen and (max-width: 960px) {
+	#adminmenu .wp-has-current-submenu.opensub .wp-submenu {
+		background: #ea5340;
+	}
 }
 #adminmenu div.wp-menu-image {
 	float: right;
@@ -273,7 +322,7 @@ div.updated {
 	margin: 0;
 }
 @media only screen and (max-width: 960px) {
-	#adminmenu div.wp-menu-image {
+	.auto-fold #adminmenu div.wp-menu-image {
 		float: none;
 		margin: 0;
 	}
@@ -345,6 +394,13 @@ ul#adminmenu>li.current>a.current:after {
 	margin: 40px 0 0 0;
 	padding: 0 0 4px 0;
 }
+.comment-php #post-body-content > h2 {
+	border: 0 none;
+	color: #222;
+	font-size: 23px;
+	line-height: 29px;
+	padding: 9px 15px 4px 0;
+}
 .wrap .add-new-h2, 
 .wrap .add-new-h2:active {
 	background: #eaeaea;
@@ -381,7 +437,8 @@ ul#adminmenu>li.current>a.current:after {
 	margin: 0 60px 0 0;
 }
 .post-php #screen-meta-links,
-.post-new-php #screen-meta-links {
+.post-new-php #screen-meta-links,
+.comment-php #screen-meta-links {
 	margin: 0 0 0 0;
 }
 #contextual-help-link-wrap, 
@@ -400,7 +457,12 @@ ul#adminmenu>li.current>a.current:after {
 	margin: 0;
 	position: relative;
 }
-
+.comment-php #poststuff h3 {
+	padding: 15px 0 0 0;
+}
+.form-table.editcomment td {
+	padding: 15px 10px 15px 0;
+}
 
 /* *********************** */
 /* Editor */
@@ -465,7 +527,8 @@ div.mce-toolbar-grp > .mce-container-body {
 		padding: 8px 0;
 	}
 }
-#side-sortablesback {
+#side-sortablesback,
+.comment-php #submitdiv-back {
 	background: #eeecec;
 	background-image: -moz-linear-gradient(left, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
 	background-image: -o-linear-gradient(left, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
@@ -478,27 +541,35 @@ div.mce-toolbar-grp > .mce-container-body {
 	z-index: -1;
 }
 @media only screen and (max-width: 850px) {
-	#side-sortablesback {
+	#side-sortablesback,
+	.comment-php #submitdiv-back {
 		background: none;
 		display: none;
 	}
 }
-#poststuff #post-body.columns-2 #side-sortables {
+#poststuff #post-body.columns-2 #side-sortables,
+.comment-php #submitdiv {
 	background: #eeecec;
 	background-image: -moz-linear-gradient(left, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
 	background-image: -o-linear-gradient(left, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
 	background-image: -webkit-linear-gradient(left, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
 	background-image: linear-gradient(to right, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
+	border: 0 none;
 	color: #555;
 	padding: 20px 0 0 0;
 	width: 299px;
 }
 @media only screen and (max-width: 850px) {
-	#poststuff #post-body.columns-2 #side-sortables {
+	#poststuff #post-body.columns-2 #side-sortables,
+	.comment-php #submitdiv {
 		background: none;
 		padding: 0;
 		width: auto;
 	}
+}
+.comment-php #submitdiv {
+	padding: 20px;
+	width: 259px;
 }
 .postbox {
 	background: none;
@@ -528,6 +599,11 @@ div.mce-toolbar-grp > .mce-container-body {
 .postbox .handlediv {
 	width: 23px;
 }
+.stuffbox {
+	border: 0 none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
 .postbox .hndle,
 .stuffbox .hndle {
 	border: 0 none;
@@ -556,11 +632,13 @@ div.mce-toolbar-grp > .mce-container-body {
 }
 
 .wp-core-ui .postbox .button, 
-.wp-core-ui .postbox .button-secondary {
+.wp-core-ui .postbox .button-secondary,
+.comment-php #minor-publishing .button {
 	background: #fff;
 	border-color: #fff;
 }
-.wp-core-ui .postbox .button:hover {
+.wp-core-ui .postbox .button:hover,
+.comment-php #minor-publishing .button:hover {
 	border-color: #999999;
 }
 .wp-core-ui .button-primary,
@@ -635,7 +713,8 @@ div.mce-toolbar-grp > .mce-container-body {
 .tablenav .actions {
 	padding: 0 8px 0 0;
 }
-.wp-list-table {
+.wp-list-table,
+table.comments {
 	border-color: transparent !important;
 	border-collapse: collapse !important;
 	border-spacing: 0 !important;
@@ -644,7 +723,9 @@ div.mce-toolbar-grp > .mce-container-body {
 	box-shadow: none !important;
 }
 .wp-list-table thead th,
-.wp-list-table tfoot th {
+.wp-list-table tfoot th,
+table.comments thead th,
+table.comments tfoot th {
 	font-size: 14px;
 	font-weight: 600;
 }
@@ -676,15 +757,20 @@ td.post-title {
 .widefat thead th.check-column {
 	padding: 14px 0 0 3px;
 }
-.wp-list-table tr th {
+.wp-list-table tr th,
+table.comments tr th {
 	border-radius: 3px 0 0 3px;
 }
-.wp-list-table tr td:last-child {
+.wp-list-table tr td:last-child,
+table.comments tr td:last-child {
 	border-radius: 0 3px 3px 0;
 }
-.wp-list-table tr:hover {
+.wp-list-table tr:hover,
+table.comments tr:hover {
 	background: #eeecec;
 }
+table.comments .alt, 
+table.comments .alternate, 
 .wp-list-table .alt, 
 .wp-list-table .alternate {
 	background: #fff;

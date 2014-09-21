@@ -1,17 +1,19 @@
 === Slate Admin Theme ===
 Contributors: ryansommers
-Tags: admin theme, admin page, admin page framework, wordpress admin panel, admin, plugin, admin panel, wordpress, best admin panel, wordpress admin theme, wordpress admin panel, flat admin theme, modern admin theme, simple admin theme, admin theme style plugin, free admin theme style plugin, backend theme, back end theme, custom admin theme, new admin ui, ryan sommers.
+Tags: admin theme, admin page, admin page framework, wordpress admin panel, admin, plugin, admin panel, wordpress, best admin panel, wordpress admin theme, wordpress admin panel, flat admin theme, modern admin theme, simple admin theme, admin theme style plugin, free admin theme style plugin, backend theme, back end theme, custom admin theme, new admin ui, wp admin theme, wp admin page, ryan sommers.
 Requires at least: 4.0
 Tested up to: 4.0
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A clean, simplified WordPress 4.0+ Admin theme.
+A clean, simplified WordPress Admin theme.
 
 == Description ==
 
-Slate provides a clean, simplified design for your WordPress 4.0 Admin area. 
+Slate provides a clean, simplified design for your WordPress 4.0+ Admin area. 
+
+You can read more about the theme at [RyanSommers.com](http://ryansommers.com/2014/09/09/slate-a-wordpress-admin-theme/ "Slate: A WordPress Admin Theme").
 
 Not compatible with any version before 4.0.
 
@@ -34,6 +36,10 @@ This is my first admin theme, and given all the various states and pages there a
 
 == Changelog ==
 
+= 1.0.4 =
+* Admin menu bug fixes.
+* Added styles to Comments page.
+
 = 1.0.3 =
 * Minor CSS fix to the admin menu.
 * Updates to readme.txt.
@@ -50,11 +56,15 @@ This is my first admin theme, and given all the various states and pages there a
 
 == Upgrade Notice ==
 
+= 1.0.4 =
+* Fixed bugs with expanding the admin menu.
+* Added styles to the Comments page
+ 
 = 1.0.3 =
 * Minor CSS fix to the admin menu.
 
 = 1.0.2 =
-Added new Login page styles.
+* Added new Login page styles.
 
 = 1.0.1 =
 * Added new Dashboard styles.
