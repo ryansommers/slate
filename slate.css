@@ -737,7 +737,6 @@ table.comments tfoot th {
 	background: #999999;
 	border-radius: 2px;
 	color: #fff;
-	float: left;
 	font-size: 12px;
 	font-weight: 400;
 	margin: -1px 10px 0 0;
@@ -749,8 +748,12 @@ table.comments tfoot th {
 	/*color: #fff;*/
 	padding: 12px 10px;
 }
-td.post-title {
-	color: #fff;
+td.post-title strong {
+	color: rgba(255,255,255,0);
+	display: inline;
+}
+.row-actions {
+	padding: 4px 0 0 0;
 }
 .widefat tbody th.check-column, 
 .widefat tfoot th.check-column, 

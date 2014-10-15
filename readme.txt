@@ -3,7 +3,7 @@ Contributors: ryansommers
 Tags: admin theme, admin page, admin page framework, wordpress admin panel, admin, plugin, admin panel, wordpress, best admin panel, wordpress admin theme, wordpress admin panel, flat admin theme, modern admin theme, simple admin theme, admin theme style plugin, free admin theme style plugin, backend theme, back end theme, custom admin theme, new admin ui, wp admin theme, wp admin page, ryan sommers.
 Requires at least: 4.0
 Tested up to: 4.0
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,12 @@ This is my first admin theme, and given all the various states and pages there a
 
 == Changelog ==
 
+= 1.0.5 =
+* Added compatibility with the Obvious Post States plugin.
+* Changed how jQuery is called in slate.js.
+* Moved screenshots to assets folder.
+* Changed post state styling in CSS.
+
 = 1.0.4 =
 * Admin menu bug fixes.
 * Added styles to Comments page.
@@ -55,6 +61,9 @@ This is my first admin theme, and given all the various states and pages there a
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.5 =
+* Added compatibility with the Obvious Post States plugin.
 
 = 1.0.4 =
 * Fixed bugs with expanding the admin menu.
