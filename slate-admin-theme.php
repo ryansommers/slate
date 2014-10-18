@@ -16,10 +16,10 @@ function slate_theme_files() {
 add_action( 'admin_enqueue_scripts', 'slate_theme_files' );
 add_action( 'login_enqueue_scripts', 'slate_theme_files' );
 
-function my_theme_add_editor_styles() {
+function slate_theme_add_editor_styles() {
     add_editor_style( plugins_url('editor-style.css', __FILE__ ) );
 }
-add_action( 'after_setup_theme', 'my_theme_add_editor_styles' );
+add_action( 'after_setup_theme', 'slate_theme_add_editor_styles' );
 
 add_filter('admin_footer_text', 'left_admin_footer_text_output');
 function left_admin_footer_text_output($text) {
