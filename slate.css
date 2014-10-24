@@ -921,7 +921,10 @@ table.comments .alternate,
 	padding: 12px 12px;
 }
 #dashboard-widgets-wrap #normal-sortables .postbox,
-#dashboard-widgets-wrap #side-sortables .postbox {
+#dashboard-widgets-wrap #side-sortables .postbox,
+#dashboard-widgets-wrap #column3-sortables .postbox, 
+#dashboard-widgets-wrap #column4-sortables .postbox, 
+#dashboard-widgets-wrap #column5-sortables .postbox {
 	background: #eeecec;
 	border: 0 none;
 	border-radius: 2px;
