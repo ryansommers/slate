@@ -881,18 +881,21 @@ table.comments .alternate,
 		margin: 0 5% 0 0;
 		width: 47.5%;
 	}
-}
-@media only screen and (max-width: 1499px) and (min-width: 800px) {
-	#wpbody-content #dashboard-widgets #postbox-container-2, 
-	#wpbody-content #dashboard-widgets #postbox-container-3, 
+
+	#wpbody-content #dashboard-widgets #postbox-container-2,
+	#wpbody-content #dashboard-widgets #postbox-container-3,
 	#wpbody-content #dashboard-widgets #postbox-container-4 {
 		float: right;
 		margin: 0;
 		width: 47.5%;
 	}
+	#wpbody-content #dashboard-widgets #postbox-container-3 {
+		float: left;
+	}
 }
 @media only screen and (max-width: 1800px) and (min-width: 1500px) {
-	#wpbody-content #dashboard-widgets .postbox-container {
+	#wpbody-content #dashboard-widgets .postbox-container,
+	#wpbody-content #dashboard-widgets #postbox-container-4 {
 		margin: 0 3.3333% 0 0;
 		width: 30%;
 	}
@@ -901,7 +904,8 @@ table.comments .alternate,
 	}
 }
 @media only screen and (max-width: 799px) {
-	#wpbody-content #dashboard-widgets .postbox-container {
+	#wpbody-content #dashboard-widgets .postbox-container,
+	#wpbody-content #dashboard-widgets #postbox-container-4 {
 		width: 100%;
 	}
 }
