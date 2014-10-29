@@ -4,7 +4,7 @@ Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: admin theme, admin page, admin page framework, wordpress admin panel, admin, plugin, admin panel, wordpress, best admin panel, wordpress admin theme, wordpress admin panel, flat admin theme, modern admin theme, simple admin theme, admin theme style plugin, free admin theme style plugin, backend theme, back end theme, custom admin theme, new admin ui, wp admin theme, wp admin page, ryan sommers.
 Requires at least: 4.0
 Tested up to: 4.0
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,9 @@ This is my first admin theme, and given all the various states and pages there a
 2. All Posts Page
 
 == Changelog ==
+
+= 1.0.8 =
+* Minor CSS fixes.
 
 = 1.0.7 =
 * Fixed minor CSS issue introduced in last update.
@@ -69,6 +72,9 @@ This is my first admin theme, and given all the various states and pages there a
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.8 =
+* Minor CSS fixes.
 
 = 1.0.7 =
 * Fixed minor CSS issue introduced in last update.

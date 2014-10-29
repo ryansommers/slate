@@ -119,7 +119,7 @@ html.wp-toolbar {
 		padding: 0;
 	}
 }
-#wpcontent #wp-admin-bar-site-name > a,
+#wpcontent #wp-admin-bar-site-name > a.ab-item,
 #wpcontent #wp-admin-bar-new-content .ab-label {
 	text-indent: -999em;
 }
@@ -128,7 +128,14 @@ html.wp-toolbar {
 	text-indent: 0;
 	margin-right: 0;
 }
-
+.wp-admin #wpcontent #wpadminbar #wp-admin-bar-site-name > .ab-item {
+	width: 20px;
+}
+@media screen and (max-width: 782px) {
+	.wp-admin #wpcontent #wpadminbar #wp-admin-bar-site-name > .ab-item {
+		width: 52px;
+	}
+}
 
 /* *********************** */
 /* Notices */
@@ -367,6 +374,7 @@ ul#adminmenu>li.current>a.current:after {
 	border-top: 1px solid #222;
 	margin: 14px auto 15px auto;
 	padding: 12px 20px 12px 9px;
+	transition-property: color;
 }
 .folded #adminmenu #collapse-menu {
 	padding: 12px 20px 12px 0;
