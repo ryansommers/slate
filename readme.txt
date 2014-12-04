@@ -1,10 +1,10 @@
 === Slate Admin Theme ===
 Contributors: ryansommers
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B997X7RTSGWG2
-Tags: admin theme, admin page, admin page framework, wordpress admin panel, admin, plugin, admin panel, wordpress, best admin panel, wordpress admin theme, wordpress admin panel, flat admin theme, modern admin theme, simple admin theme, admin theme style plugin, free admin theme style plugin, backend theme, back end theme, custom admin theme, new admin ui, wp admin theme, wp admin page, ryan sommers.
+Tags: wordpress admin theme, admin theme, white label, admin page, wordpress admin panel, admin, plugin, admin panel, wordpress, wordpress admin panel, flat admin theme, modern admin theme, simple admin theme, admin theme style plugin, free admin theme style plugin, backend theme, custom admin theme, new admin ui, wp admin theme, wp admin page, ryan sommers.
 Requires at least: 4.0
-Tested up to: 4.0
-Stable tag: 1.0.8
+Tested up to: 4.0.1
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,11 +12,21 @@ A clean, simplified WordPress Admin theme.
 
 == Description ==
 
-Slate provides a clean, simplified design for your WordPress 4.0+ Admin area. 
+Slate provides a clean, simplified design for your WordPress Admin area. 
+
+Our goal was to simplify the visual design with a primary focus on the content writing experience.
 
 You can read more about the theme at [RyanSommers.com](http://ryansommers.com/2014/09/09/slate-a-wordpress-admin-theme/ "Slate: A WordPress Admin Theme").
 
-Not compatible with any version before 4.0.
+= Slate Pro =
+Looking for more control over your WordPress Admin while still maintaining the clean and simplified design of Slate? Check out [Slate Pro](http://sevenbold.com/wordpress/slate-pro "Slate Pro: A Premium White Label WordPress Admin Theme"), a premium white label WordPress Admin theme.
+
+= Just a Few Slate Pro Features =
+* White label your WordPress Admin
+* Create a custom color scheme
+* Add your own branding
+* Customize the Login Page
+* [And way more!](http://sevenbold.com/wordpress/slate-pro "View more Slate Pro features")
 
 == Installation ==
 
@@ -34,8 +44,13 @@ This is my first admin theme, and given all the various states and pages there a
 
 1. Edit Post Page
 2. All Posts Page
+3. Ectoplasm Color Scheme
 
 == Changelog ==
+
+= 1.1 =
+* Added user profile colors
+* Fixes for Jetpack
 
 = 1.0.8 =
 * Minor CSS fixes.
@@ -73,27 +88,6 @@ This is my first admin theme, and given all the various states and pages there a
 
 == Upgrade Notice ==
 
-= 1.0.8 =
-* Minor CSS fixes.
-
-= 1.0.7 =
-* Fixed minor CSS issue introduced in last update.
-
-= 1.0.6 =
-* Fixed the background color of the extra columns on the Dashboard when the display is gets extra wide.
-
-= 1.0.5 =
-* Added compatibility with the Obvious Post States plugin.
-
-= 1.0.4 =
-* Fixed bugs with expanding the admin menu.
-* Added styles to the Comments page
- 
-= 1.0.3 =
-* Minor CSS fix to the admin menu.
-
-= 1.0.2 =
-* Added new Login page styles.
-
-= 1.0.1 =
-* Added new Dashboard styles.
+= 1.1 =
+* Slate now supports User Profile colors!
+* Minor bug fixes.
