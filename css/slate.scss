@@ -90,6 +90,10 @@ html.wp-toolbar {
 	}
 	@media screen and (max-width: 782px) {
 		padding-top: 46px;
+
+		.wp-responsive-open & {
+			right: -210px;
+		}
 	}
 }
 .wrap {
@@ -151,18 +155,21 @@ html.wp-toolbar {
 	height: 36px;
 	left: 36px;
 }
-@media screen and (max-width: 782px) {
-	.folded #wpadminbar {
-		height: 46px;
-		left: 0;
-	}
-}
 @media only screen and (max-width: 960px) {
 	#wpcontent #wpadminbar {
 		left: 200px;
 	}
 	.auto-fold #wpcontent #wpadminbar {
 		left: 36px;
+	}
+}
+@media screen and (max-width: 782px) {
+	.folded #wpadminbar {
+		height: 46px;
+		left: 0;
+	}
+	.auto-fold #wpcontent #wpadminbar {
+		left: 0;
 	}
 }
 #wpadminbar .ab-top-menu>.menupop>.ab-sub-wrapper {
@@ -175,6 +182,31 @@ html.wp-toolbar {
 		padding: 0 0;
 	}
 }
+
+// WordPress 4.1 Distraction Free Mode
+.focus-on #wpadminbar {
+	-webkit-transition-duration: .6s;
+	transition-duration: .6s;
+	-webkit-transition-property: -webkit-transform;
+	transition-property: transform;
+	-webkit-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+.focus-off #wpadminbar {
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	-webkit-transition-duration: .2s;
+	transition-duration: .2s;
+	-webkit-transition-property: -webkit-transform;
+	transition-property: transform;
+	-webkit-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+}
+
 // Admin Bar Hover Bg Color
 #wpadminbar .ab-top-menu>li.hover>.ab-item, 
 #wpadminbar .ab-top-menu>li:hover>.ab-item, 
@@ -305,14 +337,37 @@ div.updated {
 	background-image: -webkit-linear-gradient(right, rgba(0,0,0,.075) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 100%);
 	background-image: linear-gradient(to left, rgba(0,0,0,.075) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 100%);
 	width: 200px;
+
+	.wp-responsive-open & {
+		width: 200px;
+	}
+}
+// Override WP 4.1 sticky admin menu
+#adminmenuwrap {
+	bottom: auto !important;
+	position: relative !important;
+	top: 0 !important;
+
+	.sticky-menu & {
+		position: fixed !important;
+	}
+
+	.wp-responsive-open & {
+		position: absolute !important;
+	}
 }
 #adminmenuwrap,
 #adminmenu {
 	background: transparent;
 	width: 200px;
+	z-index: 9999;
+
+	.wp-responsive-open & {
+		width: 200px;
+	}
 }
 #adminmenu {
-	margin: 12px 0;
+	margin: 12px 0 0 0;
 
 	.folded & {
 		margin: 0;
@@ -322,7 +377,7 @@ div.updated {
 			margin: 0;
 		}
 		@media only screen and (max-width: 782px) {
-			margin: 12px 0;
+			margin: 12px 0 0 0;
 			top: 0;
 
 			&.adminLogoPresent {
@@ -332,15 +387,15 @@ div.updated {
 		}
 	}
 
-	.menu-icon-dashboard.wp-first-item {
+	.menu-icon-dashboard {
 		// min-height: 27px;
 
-		.folded & a.menu-top {
+		.folded & a.menu-top.menu-top-first {
 			height: 35px;
 			margin: 0 0 -8px 0;
 		}
 
-		.auto-fold & a.menu-top {
+		.auto-fold & a.menu-top.menu-top-first {
 			@media only screen and (max-width: 960px) {
 				height: 35px;
 				margin: 0 0 -8px 0;
@@ -1372,4 +1427,3 @@ table.comments .alternate,
 #wpfooter a:hover {
 	color: #fff;
 }
-
