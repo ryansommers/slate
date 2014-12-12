@@ -2,16 +2,16 @@
 
 /*
 Plugin Name: Slate Admin Theme
-Plugin URI: http://sevenbold.com/wordpress/?utm_source=wordpressorg&utm_content=plugin
+Plugin URI: http://sevenbold.com/wordpress/
 Description: A clean, simplified WordPress Admin theme
 Author: Ryan Sommers
-Version: 1.1.1
-Author URI: http://sevenbold.com/?utm_source=wordpressorg&utm_content=plugin
+Version: 1.1.2
+Author URI: http://sevenbold.com/
 */
 
 function slate_files() {
-  wp_enqueue_style( 'slate-admin-theme', plugins_url('css/slate.css', __FILE__), array(), '1.1.1' );
-  wp_enqueue_script( 'slate', plugins_url( "js/slate.js", __FILE__ ), array( 'jquery' ), '1.1.1', true );
+  wp_enqueue_style( 'slate-admin-theme', plugins_url('css/slate.css', __FILE__), array(), '1.1.2' );
+  wp_enqueue_script( 'slate', plugins_url( "js/slate.js", __FILE__ ), array( 'jquery' ), '1.1.2', true );
 }
 add_action( 'admin_enqueue_scripts', 'slate_files' );
 add_action( 'login_enqueue_scripts', 'slate_files' );
@@ -23,7 +23,7 @@ add_action( 'after_setup_theme', 'slate_add_editor_styles' );
 
 add_filter('admin_footer_text', 'slate_admin_footer_text_output');
 function slate_admin_footer_text_output($text) {
-	$text = 'WordPress Admin Theme <a href="http://wordpress.org/plugins/slate-admin-theme/" target="_blank">Slate</a> by <a href="http://sevenbold.com/wordpress/?utm_source=slate&utm_content=footer" target="_blank">Seven Bold</a>. Check out <a href="http://sevenbold.com/wordpress/slate-pro/?utm_source=slate&utm_content=footer" target="_blank">Slate Pro</a> for extra features + white label.';
+	$text = 'WordPress Admin Theme <a href="http://wordpress.org/plugins/slate-admin-theme/" target="_blank">Slate</a> by <a href="http://sevenbold.com/wordpress/" target="_blank">Seven Bold</a>. Check out <a href="http://sevenbold.com/wordpress/slate-pro/" target="_blank">Slate Pro</a> for extra features + white label.';
   return $text;
 }
 
