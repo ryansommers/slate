@@ -105,6 +105,7 @@ html.wp-toolbar {
 	}
 }
 .edit-tags-php .wrap {
+	@include clear;
 	margin: 40px 0 0 0;
 }
 .post-php .wrap,
@@ -1267,41 +1268,78 @@ table.comments .alternate,
 .edit-tags-php .search-form {
 	display: inline-block;
 	padding: 20px 0;
+	@media screen and (max-width: 782px) {
+		padding: 0;
+	}
 }
 .edit-tags-php p.search-box {
 	float: none;
+
+	@media screen and (max-width: 782px) {
+		height: auto;
+		margin: 0;
+		position: static;
+	}
 }
 .edit-tags-php #col-left {
 	background: #eeecec;
-	// background-image: -moz-linear-gradient(left, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
-	// background-image: -o-linear-gradient(left, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
-	// background-image: -webkit-linear-gradient(left, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
-	// background-image: linear-gradient(to right, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 100%);
+	background-image: -o-linear-gradient(left, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 100%);
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 100%);
+	background-image: linear-gradient(to right, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 100%);
 	color: #555;
 	float: right;
-	margin: -110px 0 0 0;
+	// margin: -110px 0 0 0;
+
+	@media only screen and (max-width: 768px) {
+		background: none;
+		float: none;
+		margin-right: 20px;
+		width: auto;
+	}
 }
 #col-leftback {
 	background: #eeecec;
-	// background-image: -moz-linear-gradient(left, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
-	// background-image: -o-linear-gradient(left, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
-	// background-image: -webkit-linear-gradient(left, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
-	// background-image: linear-gradient(to right, #dad9d9 0%, #eeecec 5%, #eeecec 100%);
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 100%);
+	background-image: -o-linear-gradient(left, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 100%);
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 100%);
+	background-image: linear-gradient(to right, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 100%);
 	bottom: 0;
 	position: absolute;
 	right: 0;
 	top: 0;
 	width: 35%;
 	z-index: -1;
+
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
 }
 .edit-tags-php #col-right {
 	float: left;
+
+	@media only screen and (max-width: 768px) {
+		float: none;
+		margin: 0;
+	}
+
+	h2 {
+		margin-right: 60px;
+
+		@media only screen and (max-width: 768px) {
+			margin-right: 20px;
+		}
+	}
 }
 .edit-tags-php #col-left .col-wrap {
 	padding: 0 30px;
 }
 .edit-tags-php #col-right .col-wrap {
 	padding: 0 60px 0 0;
+
+	@media only screen and (max-width: 768px) {
+		padding-right: 20px;
+	}
 }
 .edit-tags-php .widefat tfoot th.check-column, 
 .edit-tags-php .widefat thead th.check-column {
@@ -1310,6 +1348,10 @@ table.comments .alternate,
 .edit-tags-php #col-left h3 {
 	font-size: 16px;
 	font-weight: 400;
+
+	@media only screen and (max-width: 768px) {
+		padding-top: 20px;
+	}
 }
 .fixed .column-posts {
 	width: 76px;
