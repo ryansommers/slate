@@ -5,13 +5,13 @@ Plugin Name: Slate Admin Theme
 Plugin URI: http://sevenbold.com/wordpress/
 Description: A clean, simplified WordPress Admin theme
 Author: Ryan Sommers
-Version: 1.1.3
+Version: 1.1.4
 Author URI: http://sevenbold.com/
 */
 
 function slate_files() {
-  wp_enqueue_style( 'slate-admin-theme', plugins_url('css/slate.css', __FILE__), array(), '1.1.3' );
-  wp_enqueue_script( 'slate', plugins_url( "js/slate.js", __FILE__ ), array( 'jquery' ), '1.1.3', true );
+  wp_enqueue_style( 'slate-admin-theme', plugins_url('css/slate.css', __FILE__), array(), '1.1.4' );
+  wp_enqueue_script( 'slate', plugins_url( "js/slate.js", __FILE__ ), array( 'jquery' ), '1.1.4', true );
 }
 add_action( 'admin_enqueue_scripts', 'slate_files' );
 add_action( 'login_enqueue_scripts', 'slate_files' );
@@ -40,6 +40,20 @@ function slate_get_user_admin_color(){
 	}
 	$user_admin_color = $user_info->admin_color;
 	return $user_admin_color;
+}
+
+// Remove the hyphen before the post state
+add_filter( 'display_post_states', 'slate_post_state' );
+function slate_post_state( $post_states ) {
+	if ( !empty($post_states) ) {
+		$state_count = count($post_states);
+		$i = 0;
+		foreach ( $post_states as $state ) {
+			++$i;
+			( $i == $state_count ) ? $sep = '' : $sep = '';
+			echo "<span class='post-state'>$state$sep</span>";
+		}
+	}
 }
 
 ?>

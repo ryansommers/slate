@@ -4,7 +4,7 @@ Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: wordpress admin theme, admin theme, white label, admin page, wordpress admin panel, admin, plugin, admin panel, wordpress, wordpress admin panel, flat admin theme, modern admin theme, simple admin theme, admin theme style plugin, free admin theme style plugin, backend theme, custom admin theme, new admin ui, wp admin theme, wp admin page, ryan sommers.
 Requires at least: 4.0
 Tested up to: 4.1
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,6 +17,8 @@ Slate provides a clean, simplified design for your WordPress Admin area.
 Our goal was to simplify the visual design with a primary focus on the content writing experience.
 
 You can read more about the theme at [RyanSommers.com](http://ryansommers.com/2014/09/09/slate-a-wordpress-admin-theme/ "Slate: A WordPress Admin Theme").
+
+If you like Slate, please consider leaving a review here on WordPress. Thank you!
 
 = Slate Pro =
 Looking for more control over your WordPress Admin while still maintaining the clean and simplified design of Slate? Check out [Slate Pro](http://sevenbold.com/wordpress/slate-pro/ "Slate Pro: A Premium White Label WordPress Admin Theme"), a premium white label WordPress Admin theme.
@@ -47,6 +49,9 @@ This is my first admin theme, and given all the various states and pages there a
 3. Ectoplasm Color Scheme
 
 == Changelog ==
+
+= 1.1.4 =
+* Fixed a bug regarding hidden post titles for Subscriber roles.
 
 = 1.1.3 =
 * Increased compatibility with some 3rd party plugins and custom metaboxes.
@@ -99,6 +104,5 @@ This is my first admin theme, and given all the various states and pages there a
 
 == Upgrade Notice ==
 
-= 1.1.3 =
-* Increased compatibility with some 3rd party plugins and custom metaboxes.
-* Minor bug fixes.
+= 1.1.4 =
+* Fixed a bug regarding hidden post titles for Subscriber roles.
