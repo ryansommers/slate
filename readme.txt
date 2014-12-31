@@ -20,16 +20,6 @@ You can read more about the theme at [RyanSommers.com](http://ryansommers.com/20
 
 If you like Slate, please consider leaving a review here on WordPress. Thank you!
 
-= Slate Pro =
-Looking for more control over your WordPress Admin while still maintaining the clean and simplified design of Slate? Check out [Slate Pro](http://sevenbold.com/wordpress/slate-pro/ "Slate Pro: A Premium White Label WordPress Admin Theme"), a premium white label WordPress Admin theme.
-
-= Just a Few Slate Pro Features =
-* White label your WordPress Admin
-* Create a custom color scheme
-* Add your own branding
-* Customize the Login Page
-* [And way more!](http://sevenbold.com/wordpress/slate-pro/ "View more Slate Pro features")
-
 == Installation ==
 
 1. Unzip `slate-admin-theme.zip`
