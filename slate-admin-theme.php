@@ -23,7 +23,7 @@ add_action( 'after_setup_theme', 'slate_add_editor_styles' );
 
 add_filter('admin_footer_text', 'slate_admin_footer_text_output');
 function slate_admin_footer_text_output($text) {
-	$text = 'WordPress Admin Theme <a href="http://wordpress.org/plugins/slate-admin-theme/" target="_blank">Slate</a> by <a href="http://sevenbold.com/wordpress/" target="_blank">Seven Bold</a>. Check out <a href="http://sevenbold.com/wordpress/slate-pro/" target="_blank">Slate Pro</a> for extra features + white label.';
+	$text = 'WordPress Admin Theme <a href="http://wordpress.org/plugins/slate-admin-theme/" target="_blank">Slate</a> by <a href="http://sevenbold.com/" target="_blank">Seven Bold</a>. Check out <a href="http://codecanyon.net/item/slate-pro-a-white-label-wordpress-admin-theme/9722528?ref=sevenbold" target="_blank">Slate Pro</a> for extra features + white label.';
   return $text;
 }
 
