@@ -16,8 +16,6 @@ Slate provides a clean, simplified design for your WordPress Admin area.
 
 Our goal was to simplify the visual design with a primary focus on the content writing experience.
 
-You can read more about the theme at [RyanSommers.com](http://ryansommers.com/2014/09/09/slate-a-wordpress-admin-theme/ "Slate: A WordPress Admin Theme").
-
 If you like Slate, please consider leaving a review here on WordPress. Thank you!
 
 == Installation ==
