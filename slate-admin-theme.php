@@ -43,7 +43,7 @@ function slate_get_user_admin_color(){
 }
 
 // Remove the hyphen before the post state
-add_filter( 'display_post_states', 'slate_post_state' );
+add_filter( 'display_post_states', 'slate_post_state', 90 );
 function slate_post_state( $post_states ) {
 	if ( !empty($post_states) ) {
 		$state_count = count($post_states);
