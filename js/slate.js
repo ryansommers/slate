@@ -3,7 +3,14 @@ jQuery(document).ready(function( $ ) {
 	$('body').addClass('slate-admin-theme');
 
 	// Move elements inside #post-body-content
-	$('.wrap > h2, #screen-meta-links, #screen-meta').prependTo('#post-body-content');
+	// Version 4.0 - 4.2
+	if ( $( 'body' ).is( '.branch-4' ) || $( 'body' ).is( '.branch-4-0' ) || $( 'body' ).is( '.branch-4-1' ) || $( 'body' ).is( '.branch-4-2' ) ) {
+		$( '.wrap > h2, #screen-meta-links, #screen-meta' ).prependTo( '#post-body-content' );
+	}
+	// Version 4.3
+	if ( $( 'body' ).is( '.branch-4-3' ) ) {
+		$( '.wrap > h1, #screen-meta-links, #screen-meta' ).prependTo( '#post-body-content' );
+	}
 
 	// Move messages
 	if ($('.wrap > .updated, .wrap > .error').length != 0) {
