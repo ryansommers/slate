@@ -5,7 +5,7 @@ Plugin Name: Slate Admin Theme
 Plugin URI: http://sevenbold.com/wordpress/
 Description: A clean, simplified WordPress Admin theme
 Author: Ryan Sommers
-Version: 1.1.4
+Version: 1.1.5
 Author URI: http://sevenbold.com/
 */
 

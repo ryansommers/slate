@@ -207,6 +207,14 @@ html.wp-toolbar {
 	-webkit-transition-timing-function: ease-in-out;
 	transition-timing-function: ease-in-out;
 }
+.focus-on #post-body-content > h1 {
+	opacity: 0;
+	transition: opacity .6s ease-in-out;
+}
+.focus-off #post-body-content > h1 {
+	opacity: 1;
+	transition: opacity .6s ease-in-out;
+}
 
 // Admin Bar Hover Bg Color
 #wpadminbar .ab-top-menu>li.hover>.ab-item, 
@@ -794,10 +802,11 @@ ul#adminmenu>li.current>a.current:after {
 #post-body-content {
 	margin-bottom: 60px;
 }
-#post-body-content > h2 {
+#post-body-content > h2,
+#post-body-content > h1 {
 	border-bottom: 1px solid #eeecec;
 	color: #666;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: 400;
 	margin: 40px 0 0 0;
 	padding: 0 0 4px 0;
@@ -1183,9 +1192,10 @@ table.comments tfoot th {
 	background: #999999;
 	border-radius: 2px;
 	color: #fff;
+	display: inline-block;
 	font-size: 12px;
 	font-weight: 400;
-	margin: -1px 10px 0 0;
+	margin: -1px 10px 5px 0;
 	padding: 1px 5px;
 	vertical-align: top;
 }
@@ -1219,7 +1229,8 @@ table.comments tfoot th {
 	padding: 12px 10px;
 }
 // Hide the hyphen between title and status
-td.post-title strong {
+td.post-title strong,
+td.page-title strong {
 	display: inline;
 }
 .row-actions {
