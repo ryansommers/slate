@@ -1084,6 +1084,7 @@ div.mce-toolbar-grp > .mce-container-body {
 .wp-core-ui .button-primary:hover {
 	-webkit-box-shadow: none;
 	box-shadow: none;
+	text-shadow: none;
 }
 
 .wp-core-ui .postbox .button, 
@@ -1091,6 +1092,7 @@ div.mce-toolbar-grp > .mce-container-body {
 .comment-php #minor-publishing .button {
 	background: #fff;
 	border-color: #fff;
+	text-shadow: none;
 }
 .wp-core-ui .postbox .button:hover,
 .comment-php #minor-publishing .button:hover {
@@ -1104,11 +1106,16 @@ div.mce-toolbar-grp > .mce-container-body {
 	box-shadow: none;
 	color: #fff;
 	text-decoration: none;
+	text-shadow: none;
 }
 .wp-core-ui .button-primary:hover,
 .wp-core-ui .postbox .button-primary:hover {
 	border-color: #0074a2;
 }
+.wp-core-ui .button.button-primary.button-hero {
+	box-shadow: none;
+}
+
 #major-publishing-actions {
 	background: none;
 	border: 0 none;

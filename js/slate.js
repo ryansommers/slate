@@ -1,20 +1,58 @@
 jQuery(document).ready(function( $ ) {
 
-	$('body').addClass('slate-admin-theme');
+	var $body = $( 'body' );
+
+	$body.addClass( 'slate-admin-theme' );
 
 	// Move elements inside #post-body-content
-	// Version 4.0 - 4.2
-	if ( $( 'body' ).is( '.branch-4' ) || $( 'body' ).is( '.branch-4-0' ) || $( 'body' ).is( '.branch-4-1' ) || $( 'body' ).is( '.branch-4-2' ) ) {
+	// WordPress Version 4.0 - 4.2
+	if ( $body.is( '.branch-4' ) || $body.is( '.branch-4-0' ) || $body.is( '.branch-4-1' ) || $body.is( '.branch-4-2' ) ) {
 		$( '.wrap > h2, #screen-meta-links, #screen-meta' ).prependTo( '#post-body-content' );
-	}
-	// Version 4.3
-	if ( $( 'body' ).is( '.branch-4-3' ) ) {
-		$( '.wrap > h1, #screen-meta-links, #screen-meta' ).prependTo( '#post-body-content' );
+
+		// Move messages
+		if ( $( '.wrap > .updated, .wrap > .error' ).length != 0 && $( '#post-body-content' ).length != 0 ) {
+			$( '.wrap > .updated, .wrap > .error' ).insertBefore( '#post-body-content h2' );
+		}
+
+		// Move elements on Tags/Category pages
+		if ( $( '.edit-tags-php #col-right' ).length != 0 ) {
+			$( '.wrap > h2, .wrap > #ajax-response, .wrap > .search-form, .wrap > br' ).prependTo( '#col-right' );
+		}
 	}
 
-	// Move messages
-	if ($('.wrap > .updated, .wrap > .error').length != 0) {
-		$('.wrap > .updated, .wrap > .error').insertBefore('#post-body-content h2');
+	// WordPress Version 4.3
+	if ( $body.is( '.branch-4-3' ) ) {
+		$( '.wrap > h1, #screen-meta-links, #screen-meta' ).prependTo( '#post-body-content' );
+
+		// Move messages
+		$messages = $( '.wrap > .updated, .wrap > .error, .wrap > .notice, #wpbody-content > .updated, #wpbody-content > .error, #wpbody-content > .notice, #wpbody-content > .update-nag' );
+		if ( $messages.length != 0 && $( '#post-body-content' ).length != 0 ) {
+			$messages.insertBefore( '#post-body-content h1' );
+		}
+	}
+	if ( $body.is( '.edit-tags-php.branch-4-3' ) ) {
+		// Move elements on Tags/Category pages
+		$( '.wrap > h1, .wrap > #ajax-response, .wrap > .search-form, .wrap > br, .wrap > .updated, .wrap > .error, .wrap > .notice, #wpbody-content > .updated, #wpbody-content > .error, #wpbody-content > .notice' ).prependTo( '#col-right .col-wrap' );
+	}
+
+	// WordPress Version 4.4
+	if ( $body.is( '.branch-4-4' ) ) {
+		// Move Messages
+		$( '.wrap > h1, #screen-meta-links, #screen-meta' ).prependTo( '#post-body-content' );
+	}
+	if ( $body.is( '.edit-tags-php.branch-4-4' ) ) {
+		// Move elements on Tags/Category pages
+		$( '.wrap > h1, .wrap > #ajax-response, .wrap > .search-form, .wrap > br, .wrap > .updated, .wrap > .error' ).prependTo( '#col-right .col-wrap' );
+	}
+
+	// WordPress Version 4.5
+	if ( $body.is( '.branch-4-5' ) ) {
+		// Move Messages
+		$( '.wrap > h1, #screen-meta-links, #screen-meta' ).prependTo( '#post-body-content' );
+	}
+	if ( $body.is( '.edit-tags-php.branch-4-5' ) ) {
+		// Move elements on Tags/Category pages
+		$( '.wrap > h1, .wrap > #ajax-response, .wrap > .search-form, .wrap > br, .wrap > .updated, .wrap > .error' ).prependTo( '#col-right .col-wrap' );
 	}
 	
 	// Add background divs
@@ -26,11 +64,6 @@ jQuery(document).ready(function( $ ) {
 	}
 	if ($('.comment-php #submitdiv').length != 0) {
 		$('.comment-php #submitdiv').before('<div id="submitdiv-back"></div>');
-	}
-
-	// Move elements on Tags/Category pages
-	if ($('.edit-tags-php #col-right').length != 0) {
-		$('.wrap > h2, .wrap > #ajax-response, .wrap > .search-form, .wrap > br').prependTo('#col-right');
 	}
 
 	// Move Post State span
