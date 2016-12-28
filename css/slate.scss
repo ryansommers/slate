@@ -60,6 +60,10 @@ html.wp-toolbar {
 	background: #fff;
 	background: none;
 }
+.branch-4-6 #wpwrap,
+.branch-4-7 #wpwrap {
+	background: #fff;
+}
 #wpcontent {
 	margin-left: 200px;
 	padding-left: 60px;
@@ -806,6 +810,7 @@ ul#adminmenu>li.current>a.current:after {
 #post-body-content > h1 {
 	border-bottom: 1px solid #eeecec;
 	color: #666;
+	display: block;
 	font-size: 16px;
 	font-weight: 400;
 	margin: 40px 0 0 0;
@@ -828,11 +833,32 @@ ul#adminmenu>li.current>a.current:after {
 		padding-bottom: 0;
 	}
 }
+.branch-4-6 .wrap > h1,
+.branch-4-6 .wrap > h2,
+.branch-4-6 .col-wrap > h1,
+.branch-4-7 .wrap > h1,
+.branch-4-7 .col-wrap > h1,
+.branch-4-7 .wrap > h2 {
+	border-bottom: 1px solid #eeecec;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+
+	&.nav-tab-wrapper {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+.branch-4-7 .wrap > .wp-heading-inline {
+	display: block;
+}
 .wrap .add-new-h2, 
 .wrap .add-new-h2:active {
 	background: #eaeaea;
 	padding: 2px 6px;
 	top: -1px;
+}
+.branch-4-7 .wrap .wp-heading-inline .page-title-action {
+	margin-left: 10px;
 }
 #titlediv #title-prompt-text {
 	color: #999;
@@ -881,6 +907,10 @@ textarea:focus {
 /* *********************** */
 #screen-meta {
 	margin: 0 0 -1px 0;
+}
+.branch-4-6.edit-tags-php #screen-meta,
+.branch-4-7.edit-tags-php #screen-meta {
+	width: calc(100% - 37%);
 }
 #screen-meta-links {
 	margin: 0 60px 0 0;
@@ -994,6 +1024,12 @@ div.mce-toolbar-grp > .mce-container-body {
 	width: 299px;
 	z-index: -1;
 }
+.branch-4-6 #side-sortablesback,
+.branch-4-6.comment-php #submitdiv-back,
+.branch-4-7 #side-sortablesback,
+.branch-4-7.comment-php #submitdiv-back {
+	z-index: 0;
+}
 @media only screen and (max-width: 850px) {
 	#side-sortablesback,
 	.comment-php #submitdiv-back {
@@ -1023,6 +1059,7 @@ div.mce-toolbar-grp > .mce-container-body {
 }
 .comment-php #submitdiv {
 	padding: 20px;
+	position: relative;
 	width: 259px;
 }
 .postbox {
@@ -1149,6 +1186,7 @@ div.mce-toolbar-grp > .mce-container-body {
 	border-radius: 2px;
 	padding: 5px 20px 10px 20px;
 }
+#normal-sortables h2,
 #normal-sortables h3 {
 	padding: 8px 0;
 }
@@ -1258,12 +1296,17 @@ table.comments tr td:last-child {
 }
 .wp-list-table tr:hover,
 table.comments tr:hover {
-	background: #eeecec;
+	background: #eeecec !important;
 }
-table.comments .alt, 
-table.comments .alternate, 
-.wp-list-table .alt, 
-.wp-list-table .alternate {
+table.comments .alt,
+table.comments .alternate,
+table.comments.striped>tbody>:nth-child(odd),
+table.comments ul.striped>:nth-child(odd),
+.wp-list-table .alt,
+.wp-list-table .alternate,
+.wp-list-table.striped>tbody>:nth-child(odd),
+.wp-list-table ul.striped>:nth-child(odd)
+{
 	background: #fff;
 }
 
@@ -1311,6 +1354,10 @@ table.comments .alternate,
 		width: auto;
 	}
 }
+.branch-4-6.edit-tags-php #col-left,
+.branch-4-7.edit-tags-php #col-left {
+	position: relative;
+}
 #col-leftback {
 	background: #eeecec;
 	background-image: -moz-linear-gradient(left, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 100%);
@@ -1327,6 +1374,10 @@ table.comments .alternate,
 	@media only screen and (max-width: 768px) {
 		display: none;
 	}
+}
+.branch-4-6 #col-leftback,
+.branch-4-7 #col-leftback {
+	z-index: 0;
 }
 .edit-tags-php #col-right {
 	float: left;
@@ -1385,6 +1436,12 @@ table.comments .alternate,
 }
 .welcome-panel-content {
 	margin: 0;
+}
+.branch-4-6 .welcome-panel-content h2,
+.branch-4-7 .welcome-panel-content h2 {
+	border-bottom: 0 none;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 .welcome-panel-content h3 {
 	color: #2ea2cc;
@@ -1470,6 +1527,18 @@ table.comments .alternate,
 }
 #dashboard-widgets-wrap .postbox .handlediv {
 	width: 23px;
+}
+.branch-4-6 #dashboard-widgets #normal-sortables .ui-sortable-handle,
+.branch-4-7 #dashboard-widgets #normal-sortables .ui-sortable-handle {
+	padding: 8px 12px;
+}
+.branch-4-6 #dashboard-widgets #normal-sortables #dashboard_activity .inside,
+.branch-4-7 #dashboard-widgets #normal-sortables #dashboard_activity .inside {
+	padding: 0 12px 12px;
+}
+.branch-4-6 #dashboard-widgets #normal-sortables .inside h3,
+.branch-4-7 #dashboard-widgets #normal-sortables .inside h3 {
+	padding: 0;
 }
 
 /* *********************** */
