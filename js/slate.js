@@ -25,7 +25,7 @@ jQuery(document).ready(function( $ ) {
 		$( '.wrap > h1, #screen-meta-links, #screen-meta' ).prependTo( '#post-body-content' );
 
 		// Move messages
-		$messages = $( '.wrap > .updated, .wrap > .error, .wrap > .notice, #wpbody-content > .updated, #wpbody-content > .error, #wpbody-content > .notice, #wpbody-content > .update-nag' );
+		var $messages = $( '.wrap > .updated, .wrap > .error, .wrap > .notice, #wpbody-content > .updated, #wpbody-content > .error, #wpbody-content > .notice, #wpbody-content > .update-nag' );
 		if ( $messages.length != 0 && $( '#post-body-content' ).length != 0 ) {
 			$messages.insertBefore( '#post-body-content h1' );
 		}
@@ -35,22 +35,34 @@ jQuery(document).ready(function( $ ) {
 		$( '.wrap > h1, .wrap > #ajax-response, .wrap > .search-form, .wrap > br, .wrap > .updated, .wrap > .error, .wrap > .notice, #wpbody-content > .updated, #wpbody-content > .error, #wpbody-content > .notice' ).prependTo( '#col-right .col-wrap' );
 	}
 
-	// WordPress Version 4.4
-	if ( $body.is( '.branch-4-4' ) ) {
-		// Move Messages
+	// WordPress Version 4.4 or 4.5
+	if ( $body.is( '.branch-4-4' ) || $body.is( '.branch-4-5' ) ) {
+		// Move Elements
 		$( '.wrap > h1, #screen-meta-links, #screen-meta' ).prependTo( '#post-body-content' );
 	}
-	if ( $body.is( '.edit-tags-php.branch-4-4' ) ) {
+	if ( $body.is( '.edit-tags-php.branch-4-4' ) || $body.is( '.edit-tags-php.branch-4-5' ) ) {
 		// Move elements on Tags/Category pages
 		$( '.wrap > h1, .wrap > #ajax-response, .wrap > .search-form, .wrap > br, .wrap > .updated, .wrap > .error' ).prependTo( '#col-right .col-wrap' );
 	}
 
-	// WordPress Version 4.5
-	if ( $body.is( '.branch-4-5' ) ) {
-		// Move Messages
+	// WordPress Version 4.6
+	if ( $body.is( '.branch-4-6' ) ) {
+		// Move Elements
 		$( '.wrap > h1, #screen-meta-links, #screen-meta' ).prependTo( '#post-body-content' );
 	}
-	if ( $body.is( '.edit-tags-php.branch-4-5' ) ) {
+	if ( $body.is( '.edit-tags-php.branch-4-6' ) ) {
+		// Move elements on Tags/Category pages
+		$( '.wrap > h1, .wrap > #ajax-response, .wrap > .search-form, .wrap > br, .wrap > .updated, .wrap > .error' ).prependTo( '#col-right .col-wrap' );
+	}
+
+	// WordPress Version 4.7
+	if ( $body.is( '.branch-4-7' ) ) {
+		// Move Elements
+		$( '.wrap > h1, #screen-meta-links, #screen-meta' ).prependTo( '#post-body-content' );
+		// Move elements on Posts page
+		$( '.page-title-action' ).appendTo( '.wp-heading-inline' );
+	}
+	if ( $body.is( '.edit-tags-php.branch-4-7' ) ) {
 		// Move elements on Tags/Category pages
 		$( '.wrap > h1, .wrap > #ajax-response, .wrap > .search-form, .wrap > br, .wrap > .updated, .wrap > .error' ).prependTo( '#col-right .col-wrap' );
 	}
