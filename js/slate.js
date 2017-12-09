@@ -55,14 +55,14 @@ jQuery(document).ready(function( $ ) {
 		$( '.wrap > h1, .wrap > #ajax-response, .wrap > .search-form, .wrap > br, .wrap > .updated, .wrap > .error' ).prependTo( '#col-right .col-wrap' );
 	}
 
-	// WordPress Version 4.7
-	if ( $body.is( '.branch-4-7' ) ) {
+	// WordPress Version 4.7, 4.8, 4.9
+	if ( $body.is( '.branch-4-7' ) || $body.is( '.branch-4-8' ) || $body.is( '.branch-4-9' ) ) {
 		// Move Elements
 		$( '.wrap > h1, #screen-meta-links, #screen-meta' ).prependTo( '#post-body-content' );
 		// Move elements on Posts page
 		$( '.page-title-action' ).appendTo( '.wp-heading-inline' );
 	}
-	if ( $body.is( '.edit-tags-php.branch-4-7' ) ) {
+	if ( $body.is( '.edit-tags-php.branch-4-7' ) || $body.is( '.edit-tags-php.branch-4-8' ) || $body.is( '.edit-tags-php.branch-4-9' ) ) {
 		// Move elements on Tags/Category pages
 		$( '.wrap > h1, .wrap > #ajax-response, .wrap > .search-form, .wrap > br, .wrap > .updated, .wrap > .error' ).prependTo( '#col-right .col-wrap' );
 	}

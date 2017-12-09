@@ -56,12 +56,18 @@ html.wp-toolbar {
 /* *********************** */
 /* Main Wraps */
 /* *********************** */
+body {
+	background-color: #fff;
+}
+
 #wpwrap {
 	background: #fff;
 	background: none;
 }
 .branch-4-6 #wpwrap,
-.branch-4-7 #wpwrap {
+.branch-4-7 #wpwrap,
+.branch-4-8 #wpwrap,
+.branch-4-9 #wpwrap {
 	background: #fff;
 }
 #wpcontent {
@@ -326,12 +332,23 @@ html.wp-toolbar {
 /* *********************** */
 /* Notices */
 /* *********************** */
-.media-upload-form div.error, 
-.wrap div.error, 
+.media-upload-form div.error,
+.wrap div.error,
 .wrap div.updated {
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	margin: 42px 0 12px 0;
+	margin: 32px 0 12px 0;
+}
+.branch-4-8 .wrap div.error,
+.branch-4-8 .wrap div.updated,
+.branch-4-9 .wrap div.error,
+.branch-4-9 .wrap div.updated {
+	margin-right: 359px;
+}
+.media-upload-form div.error + div.error,
+.wrap div.error + div.error,
+.wrap div.updated + div.updated {
+	margin: 0 0 12px 0;
 }
 div.error,
 div.updated {
@@ -637,7 +654,7 @@ div.updated {
 	#adminmenu .opensub .wp-submenu li.current a:hover {
 		color: #fff;
 	}
-	.sticky-menu #adminmenu .wp-submenu li.current a
+	.sticky-menu #adminmenu .wp-submenu li.current a,
 	.sticky-menu #adminmenu .opensub .wp-submenu li.current,
 	.sticky-menu #adminmenu .opensub .wp-submenu li.current a, 
 	.sticky-menu #adminmenu .opensub .wp-submenu li.current a:focus, 
@@ -816,6 +833,14 @@ ul#adminmenu>li.current>a.current:after {
 	margin: 40px 0 0 0;
 	padding: 0 0 4px 0;
 }
+.wrap .wp-heading-inline {
+	color: #666;
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 40px 0 0 0;
+	padding: 0 0 4px 0;
+}
 .comment-php #post-body-content > h2 {
 	border: 0 none;
 	color: #222;
@@ -837,8 +862,8 @@ ul#adminmenu>li.current>a.current:after {
 .branch-4-6 .wrap > h2,
 .branch-4-6 .col-wrap > h1,
 .branch-4-7 .wrap > h1,
-.branch-4-7 .col-wrap > h1,
-.branch-4-7 .wrap > h2 {
+.branch-4-7 .wrap > h2,
+.branch-4-7 .col-wrap > h1 {
 	border-bottom: 1px solid #eeecec;
 	margin-bottom: 20px;
 	padding-bottom: 20px;
@@ -848,7 +873,23 @@ ul#adminmenu>li.current>a.current:after {
 		padding-bottom: 0;
 	}
 }
-.branch-4-7 .wrap > .wp-heading-inline {
+.branch-4-8 .wrap > h1,
+.branch-4-8 .wrap > h2,
+.branch-4-8 .col-wrap > h1,
+.branch-4-9 .wrap > h1,
+.branch-4-9 .col-wrap > h1,
+.branch-4-9 .wrap > h2 {
+	display: block;
+	margin-bottom: 20px;
+
+	&.nav-tab-wrapper {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+.branch-4-7 .wrap > .wp-heading-inline,
+.branch-4-8 .wrap > .wp-heading-inline,
+.branch-4-9 .wrap > .wp-heading-inline {
 	display: block;
 }
 .wrap .add-new-h2, 
@@ -857,7 +898,9 @@ ul#adminmenu>li.current>a.current:after {
 	padding: 2px 6px;
 	top: -1px;
 }
-.branch-4-7 .wrap .wp-heading-inline .page-title-action {
+.branch-4-7 .wrap .wp-heading-inline .page-title-action,
+.branch-4-8 .wrap .wp-heading-inline .page-title-action,
+.branch-4-9 .wrap .wp-heading-inline .page-title-action {
 	margin-left: 10px;
 }
 #titlediv #title-prompt-text {
@@ -909,7 +952,9 @@ textarea:focus {
 	margin: 0 0 -1px 0;
 }
 .branch-4-6.edit-tags-php #screen-meta,
-.branch-4-7.edit-tags-php #screen-meta {
+.branch-4-7.edit-tags-php #screen-meta,
+.branch-4-8.edit-tags-php #screen-meta,
+.branch-4-9.edit-tags-php #screen-meta {
 	width: calc(100% - 37%);
 }
 #screen-meta-links {
@@ -958,7 +1003,7 @@ textarea:focus {
 	border-bottom: 1px solid #dad9d9;
 }
 .wp-editor-container {
-	border-color: #fff;
+	border-color: #fff !important;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
@@ -1027,7 +1072,11 @@ div.mce-toolbar-grp > .mce-container-body {
 .branch-4-6 #side-sortablesback,
 .branch-4-6.comment-php #submitdiv-back,
 .branch-4-7 #side-sortablesback,
-.branch-4-7.comment-php #submitdiv-back {
+.branch-4-7.comment-php #submitdiv-back,
+.branch-4-8 #side-sortablesback,
+.branch-4-8.comment-php #submitdiv-back,
+.branch-4-9 #side-sortablesback,
+.branch-4-9.comment-php #submitdiv-back {
 	z-index: 0;
 }
 @media only screen and (max-width: 850px) {
@@ -1172,7 +1221,7 @@ div.mce-toolbar-grp > .mce-container-body {
 }
 @media only screen and (max-width: 960px) {
 	.misc-pub-section {
-		padding: 6px 0px 8px;
+		padding: 6px 0 8px;
 	}
 }
 
@@ -1355,7 +1404,9 @@ table.comments ul.striped>:nth-child(odd),
 	}
 }
 .branch-4-6.edit-tags-php #col-left,
-.branch-4-7.edit-tags-php #col-left {
+.branch-4-7.edit-tags-php #col-left,
+.branch-4-8.edit-tags-php #col-left,
+.branch-4-9.edit-tags-php #col-left {
 	position: relative;
 }
 #col-leftback {
@@ -1376,7 +1427,9 @@ table.comments ul.striped>:nth-child(odd),
 	}
 }
 .branch-4-6 #col-leftback,
-.branch-4-7 #col-leftback {
+.branch-4-7 #col-leftback,
+.branch-4-8 #col-leftback,
+.branch-4-9 #col-leftback {
 	z-index: 0;
 }
 .edit-tags-php #col-right {
@@ -1438,7 +1491,9 @@ table.comments ul.striped>:nth-child(odd),
 	margin: 0;
 }
 .branch-4-6 .welcome-panel-content h2,
-.branch-4-7 .welcome-panel-content h2 {
+.branch-4-7 .welcome-panel-content h2,
+.branch-4-8 .welcome-panel-content h2,
+.branch-4-9 .welcome-panel-content h2 {
 	border-bottom: 0 none;
 	margin-bottom: 0;
 	padding-bottom: 0;
@@ -1529,15 +1584,21 @@ table.comments ul.striped>:nth-child(odd),
 	width: 23px;
 }
 .branch-4-6 #dashboard-widgets #normal-sortables .ui-sortable-handle,
-.branch-4-7 #dashboard-widgets #normal-sortables .ui-sortable-handle {
+.branch-4-7 #dashboard-widgets #normal-sortables .ui-sortable-handle,
+.branch-4-8 #dashboard-widgets #normal-sortables .ui-sortable-handle,
+.branch-4-9 #dashboard-widgets #normal-sortables .ui-sortable-handle {
 	padding: 8px 12px;
 }
 .branch-4-6 #dashboard-widgets #normal-sortables #dashboard_activity .inside,
-.branch-4-7 #dashboard-widgets #normal-sortables #dashboard_activity .inside {
+.branch-4-7 #dashboard-widgets #normal-sortables #dashboard_activity .inside,
+.branch-4-8 #dashboard-widgets #normal-sortables #dashboard_activity .inside,
+.branch-4-9 #dashboard-widgets #normal-sortables #dashboard_activity .inside {
 	padding: 0 12px 12px;
 }
 .branch-4-6 #dashboard-widgets #normal-sortables .inside h3,
-.branch-4-7 #dashboard-widgets #normal-sortables .inside h3 {
+.branch-4-7 #dashboard-widgets #normal-sortables .inside h3,
+.branch-4-8 #dashboard-widgets #normal-sortables .inside h3,
+.branch-4-9 #dashboard-widgets #normal-sortables .inside h3 {
 	padding: 0;
 }
 
