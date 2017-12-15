@@ -284,29 +284,29 @@ body {
 	color: #fff;
 }
 
-#wpcontent #wp-admin-bar-root-default > li > a,
-#wpcontent #wp-admin-bar-top-secondary > li > a,
+#wpcontent #wp-admin-bar-root-default > li > .ab-item,
+#wpcontent #wp-admin-bar-top-secondary > li > .ab-item,
 #wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
 	padding: 14px 10px 15px 10px;
 }
-.folded #wpcontent #wp-admin-bar-root-default > li > a,
-.folded #wpcontent #wp-admin-bar-top-secondary > li > a,
+.folded #wpcontent #wp-admin-bar-root-default > li > .ab-item,
+.folded #wpcontent #wp-admin-bar-top-secondary > li > .ab-item,
 .folded #wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
 	padding: 2px 7px 2px 7px;
 }
 @media screen and (max-width: 960px) {
-	#wpcontent #wp-admin-bar-root-default > li > a,
-	#wpcontent #wp-admin-bar-top-secondary > li > a,
+	#wpcontent #wp-admin-bar-root-default > li > .ab-item,
+	#wpcontent #wp-admin-bar-top-secondary > li > .ab-item,
 	#wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
 		padding: 2px 7px 2px 7px;
 	}
 }
 @media screen and (max-width: 782px) {
-	#wpcontent #wp-admin-bar-root-default > li > a,
-	#wpcontent #wp-admin-bar-top-secondary > li > a,
+	#wpcontent #wp-admin-bar-root-default > li > .ab-item,
+	#wpcontent #wp-admin-bar-top-secondary > li > .ab-item,
 	#wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item,
-	.folded #wpcontent #wp-admin-bar-root-default > li > a,
-	.folded #wpcontent #wp-admin-bar-top-secondary > li > a,
+	.folded #wpcontent #wp-admin-bar-root-default > li > .ab-item,
+	.folded #wpcontent #wp-admin-bar-top-secondary > li > .ab-item,
 	.folded #wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
 		padding: 0;
 	}
