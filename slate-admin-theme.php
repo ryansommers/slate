@@ -5,13 +5,13 @@ Plugin Name: Slate Admin Theme
 Plugin URI: http://sevenbold.com/wordpress/
 Description: A clean, simplified WordPress Admin theme
 Author: Ryan Sommers
-Version: 1.1.8
+Version: 1.1.9
 Author URI: http://sevenbold.com/
 */
 
 function slate_files() {
-  wp_enqueue_style( 'slate-admin-theme', plugins_url('css/slate.css', __FILE__), array(), '1.1.8' );
-  wp_enqueue_script( 'slate', plugins_url( "js/slate.js", __FILE__ ), array( 'jquery' ), '1.1.8' );
+  wp_enqueue_style( 'slate-admin-theme', plugins_url('css/slate.css', __FILE__), array(), '1.1.9' );
+  wp_enqueue_script( 'slate', plugins_url( "js/slate.js", __FILE__ ), array( 'jquery' ), '1.1.9' );
 }
 add_action( 'admin_enqueue_scripts', 'slate_files' );
 add_action( 'login_enqueue_scripts', 'slate_files' );
@@ -36,7 +36,7 @@ function slate_get_user_admin_color(){
 	$user_id = get_current_user_id();
 	$user_info = get_userdata($user_id);
 	if ( !( $user_info instanceof WP_User ) ) {
-		return; 
+		return;
 	}
 	$user_admin_color = $user_info->admin_color;
 	return $user_admin_color;
