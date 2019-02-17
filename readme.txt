@@ -4,7 +4,7 @@ Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: wordpress admin theme, admin theme, white label, admin page, wordpress admin panel, admin, plugin, admin panel, wordpress, wordpress admin panel, flat admin theme, modern admin theme, simple admin theme, admin theme style plugin, free admin theme style plugin, backend theme, custom admin theme, new admin ui, wp admin theme, wp admin page, ryan sommers.
 Requires at least: 4.0
 Tested up to: 5.0
-Stable tag: 1.1.9
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ This is my first admin theme, and given all the various states and pages there a
 3. Ectoplasm Color Scheme
 
 == Changelog ==
+
+= 1.2 =
+* Minor bug fixes.
 
 = 1.1.9 =
 * Compatibility update for WordPress 5.0+ and Gutenberg.

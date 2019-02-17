@@ -1061,6 +1061,15 @@ textarea:focus {
 	}
 }
 
+.edit-post-layout .editor-post-publish-panel {
+	@media only screen and (min-width: 782px) {
+		top: 36px;
+	}
+	@media only screen and (min-width: 961px) {
+		top: 61px;
+	}
+}
+
 /* *********************** */
 /* Editor */
 /* *********************** */
