@@ -1052,6 +1052,38 @@ textarea:focus {
 	}
 }
 
+body.version-5-1 {
+	.edit-post-layout__content {
+		@media only screen and (min-width: 782px) {
+			margin-left: 200px;
+			min-height: calc(100% - 92px);
+			top: 92px;
+		}
+		@media only screen and (min-width: 961px) {
+			margin-left: 200px;
+			min-height: calc(100% - 117px);
+			top: 117px;
+		}
+	}
+
+	&.auto-fold .edit-post-layout__content {
+		@media only screen and (min-width: 782px) {
+			margin-left: 36px;
+		}
+		@media only screen and (min-width: 961px) {
+			margin-left: 200px;
+		}
+	}
+
+	&.folded .edit-post-layout__content {
+		@media only screen and (min-width: 782px) {
+			margin-left: 36px;
+		}
+		@media only screen and (min-width: 961px) {
+			margin-left: 36px;
+		}
+	}
+}
 .edit-post-sidebar {
 	@media only screen and (min-width: 782px) {
 		top: 92px;
