@@ -280,28 +280,38 @@ body {
 }
 
 #wpcontent #wp-admin-bar-root-default > li > a,
+#wpcontent #wp-admin-bar-root-default > li > button,
 #wpcontent #wp-admin-bar-top-secondary > li > a,
+#wpcontent #wp-admin-bar-top-secondary > li > button,
 #wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
 	padding: 14px 10px 15px 10px;
 }
 .folded #wpcontent #wp-admin-bar-root-default > li > a,
+.folded #wpcontent #wp-admin-bar-root-default > li > button,
 .folded #wpcontent #wp-admin-bar-top-secondary > li > a,
+.folded #wpcontent #wp-admin-bar-top-secondary > li > button,
 .folded #wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
 	padding: 2px 7px 2px 7px;
 }
 @media screen and (max-width: 960px) {
 	#wpcontent #wp-admin-bar-root-default > li > a,
+	#wpcontent #wp-admin-bar-root-default > li > button,
 	#wpcontent #wp-admin-bar-top-secondary > li > a,
+	#wpcontent #wp-admin-bar-top-secondary > li > button,
 	#wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
 		padding: 2px 7px 2px 7px;
 	}
 }
 @media screen and (max-width: 782px) {
 	#wpcontent #wp-admin-bar-root-default > li > a,
+	#wpcontent #wp-admin-bar-root-default > li > button,
 	#wpcontent #wp-admin-bar-top-secondary > li > a,
+	#wpcontent #wp-admin-bar-top-secondary > li > button,
 	#wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item,
 	.folded #wpcontent #wp-admin-bar-root-default > li > a,
+	.folded #wpcontent #wp-admin-bar-root-default > li > button,
 	.folded #wpcontent #wp-admin-bar-top-secondary > li > a,
+	.folded #wpcontent #wp-admin-bar-top-secondary > li > button,
 	.folded #wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
 		padding: 0;
 	}
@@ -1084,6 +1094,30 @@ body.version-5-1 {
 		}
 	}
 }
+
+// Version 5.4 .version-5-4
+.block-editor-editor-skeleton {
+	@media only screen and (min-width: 782px) {
+		left: 200px;
+	}
+	@media only screen and (min-width: 961px) {
+		top: 61px;
+	}
+}
+.auto-fold .block-editor-editor-skeleton {
+	@media only screen and (min-width: 961px) {
+		left: 200px;
+	}
+}
+.folded .block-editor-editor-skeleton {
+	@media only screen and (min-width: 782px) {
+		left: 36px;
+	}
+	@media only screen and (min-width: 961px) {
+		top: 32px;
+	}
+}
+
 .edit-post-sidebar {
 	@media only screen and (min-width: 782px) {
 		top: 92px;
