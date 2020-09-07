@@ -1118,6 +1118,31 @@ body.version-5-1 {
 	}
 }
 
+// Version 5.5
+.interface-interface-skeleton {
+	@media (min-width: 783px) {
+		left: 200px;
+		top: 61px;
+	}
+}
+
+.auto-fold .interface-interface-skeleton {
+	@media (min-width: 783px) {
+		left: 36px;
+	}
+
+	@media (min-width: 961px) {
+		left: 200px;
+	}
+}
+
+.folded .interface-interface-skeleton {
+	@media (min-width: 783px) {
+		left: 36px;
+		top: 32px;
+	}
+}
+
 .edit-post-sidebar {
 	@media only screen and (min-width: 782px) {
 		top: 92px;
