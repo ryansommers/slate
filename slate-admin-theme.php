@@ -5,13 +5,13 @@ Plugin Name: Slate Admin Theme
 Plugin URI: http://sevenbold.com/wordpress/
 Description: A clean, simplified WordPress Admin theme
 Author: Ryan Sommers
-Version: 1.2.2
+Version: 1.2.3
 Author URI: http://sevenbold.com/
 */
 
 function slate_files() {
-  wp_enqueue_style( 'slate-admin-theme', plugins_url('css/slate.css', __FILE__), array(), '1.2.2' );
-  wp_enqueue_script( 'slate', plugins_url( "js/slate.js", __FILE__ ), array( 'jquery' ), '1.2.2' );
+  wp_enqueue_style( 'slate-admin-theme', plugins_url('css/slate.css', __FILE__), array(), '1.2.3' );
+  wp_enqueue_script( 'slate', plugins_url( "js/slate.js", __FILE__ ), array( 'jquery' ), '1.2.3' );
 }
 add_action( 'admin_enqueue_scripts', 'slate_files' );
 add_action( 'login_enqueue_scripts', 'slate_files' );
@@ -43,7 +43,9 @@ function slate_get_user_admin_color(){
 }
 
 // Remove the hyphen before the post state
-add_filter( 'display_post_states', 'slate_post_state' );
+if ( is_admin() ) {
+	add_filter( 'display_post_states', 'slate_post_state', 11 );
+}
 function slate_post_state( $post_states ) {
 	if ( !empty($post_states) ) {
 		$state_count = count($post_states);
