@@ -281,6 +281,7 @@ body {
 
 #wpcontent #wp-admin-bar-root-default > li > a,
 #wpcontent #wp-admin-bar-root-default > li > button,
+#wpcontent #wp-admin-bar-root-default > li > div,
 #wpcontent #wp-admin-bar-top-secondary > li > a,
 #wpcontent #wp-admin-bar-top-secondary > li > button,
 #wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
@@ -288,6 +289,7 @@ body {
 }
 .folded #wpcontent #wp-admin-bar-root-default > li > a,
 .folded #wpcontent #wp-admin-bar-root-default > li > button,
+.folded #wpcontent #wp-admin-bar-root-default > li > div,
 .folded #wpcontent #wp-admin-bar-top-secondary > li > a,
 .folded #wpcontent #wp-admin-bar-top-secondary > li > button,
 .folded #wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
@@ -296,6 +298,7 @@ body {
 @media screen and (max-width: 960px) {
 	#wpcontent #wp-admin-bar-root-default > li > a,
 	#wpcontent #wp-admin-bar-root-default > li > button,
+	#wpcontent #wp-admin-bar-root-default > li > div,
 	#wpcontent #wp-admin-bar-top-secondary > li > a,
 	#wpcontent #wp-admin-bar-top-secondary > li > button,
 	#wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
@@ -305,11 +308,13 @@ body {
 @media screen and (max-width: 782px) {
 	#wpcontent #wp-admin-bar-root-default > li > a,
 	#wpcontent #wp-admin-bar-root-default > li > button,
+	#wpcontent #wp-admin-bar-root-default > li > div,
 	#wpcontent #wp-admin-bar-top-secondary > li > a,
 	#wpcontent #wp-admin-bar-top-secondary > li > button,
 	#wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item,
 	.folded #wpcontent #wp-admin-bar-root-default > li > a,
 	.folded #wpcontent #wp-admin-bar-root-default > li > button,
+	.folded #wpcontent #wp-admin-bar-root-default > li > div,
 	.folded #wpcontent #wp-admin-bar-top-secondary > li > a,
 	.folded #wpcontent #wp-admin-bar-top-secondary > li > button,
 	.folded #wpcontent #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
@@ -1053,6 +1058,12 @@ textarea:focus {
 .auto-fold .components-notice-list {
 	@media only screen and (min-width: 961px) {
 		left: 200px;
+	}
+}
+
+.version-5-9.auto-fold .components-notice-list {
+	@media only screen and (min-width: 961px) {
+		left: 0;
 	}
 }
 
@@ -1804,5 +1815,20 @@ table.comments ul.striped>:nth-child(odd),
 	.caldera-editor-body > h3,
 	.caldera-config-editor-main-panel > h3 {
 		top: 128px + 29px;
+	}
+}
+
+// Elementor admin bar
+.slate-admin-theme #e-admin-top-bar-root {
+	@media only screen and (min-width: 961px) {
+		width: calc(100% - 200px);
+	}
+}
+
+// WooCommerce admin bar
+.slate-admin-theme .woocommerce-layout__header {
+	@media only screen and (min-width: 961px) {
+		top: 61px;
+		width: calc(100% - 200px);
 	}
 }
