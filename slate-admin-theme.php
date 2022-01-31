@@ -47,7 +47,7 @@ if ( is_admin() ) {
 	add_filter( 'display_post_states', 'slate_post_state', 11 );
 }
 function slate_post_state( $post_states ) {
-	if ( !empty($post_states) ) {
+	if ( ! empty( $post_states && ! is_customize_preview() && 'Menus' !== get_admin_page_title() ) ) {
 		$state_count = count($post_states);
 		$i = 0;
 		foreach ( $post_states as $state ) {

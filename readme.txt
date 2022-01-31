@@ -40,6 +40,7 @@ This is my first admin theme, and given all the various states and pages there a
 
 = 1.2.4 =
 * Styling updates for WordPress 5.9.
+* Removes post state from Customzier and Menus
 * Styling fixes for Elementor and WooCommerce
 
 = 1.2.3 =
